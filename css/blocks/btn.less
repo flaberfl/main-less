@@ -1,0 +1,39 @@
+// main: ../style.less
+
+.btn {
+  display: inline-block;
+  padding: 1.2em 4.4em;
+
+  border-radius: .5rem;
+
+  font-size: 1.5rem;
+  color: @white;
+  .text-center;
+
+  background-color: @orange;
+
+  transition: box-shadow .2s linear, background-color .2s linear;
+
+  &:hover {
+    box-shadow: @shadow-elipse;
+
+    background-color: fade(@orange, 90%);
+  }
+
+  &--blue {
+    background-color: @blue;
+
+    &:hover {
+      background-color: fade(@blue, 90%);
+    }
+  }
+
+  &--sm {
+    padding: 1.2em 2.7em;
+  }
+
+  &--esm {
+    padding: 1.2em;
+  }
+
+}

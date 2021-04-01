@@ -1,0 +1,33 @@
+// // compress: true
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import "reset";
+@import "vars";
+@import "vendor";
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+
+
+  &.show-sidebar {
+    overflow: hidden;
+  }
+}
+
+
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/burger";
