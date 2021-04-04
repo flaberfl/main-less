@@ -430,11 +430,32 @@ body.show-sidebar {
 .header__inner {
   display: flex;
 }
+.nav {
+  display: flex;
+}
+@media (max-width: 991px) {
+  .nav {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .nav__mobile {
+    display: block;
+    flex-direction: column;
+    overflow: auto;
+    transform: translateX(-100%);
+    transition: transform 1s linear;
+  }
+  .show-sidebar .nav__mobile {
+    transform: translateX(0);
+  }
+}
 .burger {
   display: none;
   width: 3rem;
   height: 2rem;
   padding: 0;
+  margin: 2rem;
   background: none;
   border: none;
   font-size: 0;
