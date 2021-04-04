@@ -1,5 +1,5 @@
 const modalBtn = document.querySelectorAll('[data-modal]'); /* Выбираем все кнопки с атрибутом data-modal */
-const body = document.body;
+const bodyModal = document.body;
 const modalClose = document.querySelectorAll('.modal__close');
 const modal = document.querySelectorAll('.modal');
 
@@ -17,25 +17,22 @@ modalBtn.forEach(item => {
     })
 
     modal.classList.add('show');
-    body.classList.add('no-scroll');
+    bodyModal.classList.add('no-scroll');
 
     setTimeout(() => {
       modalContent.style.transform = 'none';
       modalContent.style.opacity = '1';
-
     }, 1);
-
   })
 });
 
 modalClose.forEach(item => {
   item.addEventListener('click', event => {
     let currentModal = event.currentTarget.closest('.modal');
-   
+
     closeModal(currentModal);
   });
 });
-
 
 modal.forEach(item => {
   item.addEventListener('click', event => {
@@ -48,11 +45,10 @@ modal.forEach(item => {
 function closeModal(currentModal) {
   let modalContent = currentModal.querySelector('.modal__content'); // Удалим transform none
   modalContent.removeAttribute('style');
-  
 
   setTimeout(() => {
     currentModal.classList.remove('show');
-    body.classList.remove('no-scroll');
+    bodyModal.classList.remove('no-scroll');
   }, 250);
 }
 

@@ -417,6 +417,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
 }
+body.no-scroll,
 body.show-sidebar {
   overflow: hidden;
 }
@@ -471,11 +472,11 @@ body.show-sidebar {
   padding: 0;
   margin: 2rem;
   background: none;
+  top: 0;
+  right: 0;
   border: none;
   font-size: 0;
   color: transparent;
-  top: 0;
-  right: 0;
 }
 .burger:before,
 .burger:after,
@@ -528,4 +529,47 @@ body.show-sidebar {
 }
 .main {
   margin-top: 20rem;
+}
+.modal {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+}
+.modal.show {
+  display: flex;
+}
+.modal__content {
+  width: 100%;
+  max-width: 50rem;
+  padding: 8rem;
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(-10rem);
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+}
+.modal__close {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  transition: transform 0.2s linear, opacity 0.2s linear;
+}
+.modal__close:hover {
+  transform: rotate(-90deg);
+  opacity: 1;
 }
