@@ -1,24 +1,29 @@
 // main: ../style.less
-.nav {
-    display: flex;
-    @media @tablet {
-        display: none;
-    }
 
-}
 .nav__mobile {
-
+    display: flex;
+    
     @media @tablet {
 
         display: block;
         flex-direction: column;
+        padding: 3rem;
+
+        background-color: @white;
+        z-index: 999;
+
         overflow: auto; // Чтобы скроллился сайдбар
 
-        transform: translateX(-100%); // Изначально спрятана
+
+        transform: translateX(-150%); // Изначально спрятана
         transition: transform 1s linear;
 
         .show-sidebar & {
             transform: translateX(0); // Выезжает
         }
+    }
+
+    a {
+        display: block;
     }
 }
