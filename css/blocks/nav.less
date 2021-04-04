@@ -2,7 +2,7 @@
 
 .nav__mobile {
     display: flex;
-    
+    // position: fixed;
     @media @tablet {
 
         display: block;
@@ -15,11 +15,11 @@
         overflow: auto; // Чтобы скроллился сайдбар
 
 
-        transform: translateX(-150%); // Изначально спрятана
-        transition: transform 1s linear;
+        transform: translate3D(-150%, -150%, 0); // Изначально спрятана
+        transition: transform .2s linear;
 
         .show-sidebar & {
-            transform: translateX(0); // Выезжает
+            transform: translate3D(0, 0, 0); // Выезжает
         }
     }
 

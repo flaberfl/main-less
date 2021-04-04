@@ -453,17 +453,18 @@ body.show-sidebar {
     background-color: #fff;
     z-index: 999;
     overflow: auto;
-    transform: translateX(-150%);
-    transition: transform 1s linear;
+    transform: translate3D(-150%, -150%, 0);
+    transition: transform 0.2s linear;
   }
   .show-sidebar .nav__mobile {
-    transform: translateX(0);
+    transform: translate3D(0, 0, 0);
   }
 }
 .nav__mobile a {
   display: block;
 }
 .burger {
+  position: fixed;
   display: none;
   width: 3rem;
   height: 2rem;
@@ -473,7 +474,6 @@ body.show-sidebar {
   border: none;
   font-size: 0;
   color: transparent;
-  position: absolute;
   top: 0;
   right: 0;
 }

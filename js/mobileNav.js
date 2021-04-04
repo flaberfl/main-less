@@ -1,4 +1,5 @@
 const burger = document.getElementById('burger');
+const nav = document.getElementById('mobile-menu');
 const body = document.body;
 
 // Когда кликаем на бургер-проверяем, есть ли у body класс show-sidebar, если класс есть - мы вызываем
@@ -13,6 +14,11 @@ burger.addEventListener('click', event => {
     showSidebar();
   }
 });
+
+// Для того, чтобы при клике по менюхе-был переход по сслыке и меню закрылось ))
+nav.addEventListener('click', event => {
+  closeSidebar();
+})
 
 function showSidebar() {
   let mask = document.createElement('div');
