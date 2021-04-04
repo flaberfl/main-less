@@ -420,17 +420,15 @@ body {
 body.show-sidebar {
   overflow: hidden;
 }
-@media (max-width: 991px) {
-  .mask {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-  }
+.mask {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 .container {
   width: 100%;
@@ -444,12 +442,14 @@ body.show-sidebar {
 }
 .nav__mobile {
   display: flex;
+  position: fixed;
 }
 @media (max-width: 991px) {
   .nav__mobile {
     display: block;
     flex-direction: column;
     padding: 3rem;
+    height: 100%;
     background-color: #fff;
     z-index: 999;
     overflow: auto;
@@ -482,13 +482,16 @@ body.show-sidebar {
 .burger span {
   display: block;
   width: 100%;
-  height: 2px;
+  height: 4px;
+  border-radius: 16px;
   background-color: #000;
   position: absolute;
+  z-index: 999;
 }
 .burger:before,
 .burger:after {
   content: "";
+  transition: transform 0.2s linear;
 }
 .burger:before {
   top: 0;
@@ -501,12 +504,16 @@ body.show-sidebar {
   transform: translateY(-50%);
   transition: opacity 0.2s linear;
 }
+.show-sidebar .burger {
+  position: absolute;
+}
 .show-sidebar .burger span {
   opacity: 0;
 }
 .show-sidebar .burger:before,
 .show-sidebar .burger:after {
   top: 50%;
+  background-color: #fff;
 }
 .show-sidebar .burger:before {
   transform: rotate(45deg);

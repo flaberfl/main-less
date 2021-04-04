@@ -2,24 +2,25 @@
 
 .nav__mobile {
     display: flex;
-    // position: fixed;
-    @media @tablet {
+    position: fixed;
 
+    @media @tablet {
         display: block;
         flex-direction: column;
         padding: 3rem;
+        height: 100%;
 
         background-color: @white;
         z-index: 999;
 
-        overflow: auto; // Чтобы скроллился сайдбар
+        overflow: auto;
 
 
-        transform: translate3D(-150%, -150%, 0); // Изначально спрятана
+        transform: translate3D(-150%, -150%, 0);
         transition: transform .2s linear;
 
         .show-sidebar & {
-            transform: translate3D(0, 0, 0); // Выезжает
+            transform: translate3D(0, 0, 0);
         }
     }
 
