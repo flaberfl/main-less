@@ -411,6 +411,7 @@ textarea {
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -445,7 +446,7 @@ body.show-sidebar {
   display: flex;
   position: fixed;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .nav__mobile {
     display: block;
     flex-direction: column;
@@ -522,7 +523,7 @@ body.show-sidebar {
 .show-sidebar .burger:after {
   transform: rotate(-45deg);
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .burger {
     display: block;
   }
