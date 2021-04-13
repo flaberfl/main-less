@@ -35,38 +35,3 @@ function closeSidebar() {
   body.classList.remove('show-sidebar');
   document.querySelector('.overlay').remove();
 }
-
-
-
-
-
-// document.querySelector('.burger').addEventListener('click', function () {
-
-//   document.querySelector('.burger span').classList.toggle('active');
-//   document.querySelector('.navbar').classList.toggle('active');
-//   document.body.classList.toggle('overlay');
-// })
-
-
-// const menu = document.querySelector('.navbar'),
-//     menuItems = document.querySelectorAll('.navbar__link'),
-//     hamburger = document.querySelector('.burger');
-// hamburger.addEventListener('click', () => {
-//     hamburger.classList.toggle('active')
-//     menu.classList.toggle('active')
-// });
-// menuItems.forEach(link => {
-//     link.addEventListener('click', () => {
-//         hamburger.classList.toggle('active')
-//         menu.classList.toggle('active')
-//     })
-// });
-
-// const nav = document.querySelector('.header__inner');
-// window.addEventListener('scroll', function () {
-//     if (this.scrollY > 40) {
-//         nav.classList.add('sticky');
-//     } else {
-//         nav.classList.remove('sticky');
-//     }
-// });

@@ -28,17 +28,22 @@ body {
   overflow: auto;
   margin: 0;
   padding: 0;
-  
+
   min-width: 320px;
-  
+
   font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
-  
+
   &.overlay,
   &.no-scroll,
   &.show-sidebar {
     overflow: hidden;
   }
+}
+
+.swiper-container {
+  width: 600px;
+  height: 300px;
 }
 
 .container {
@@ -108,7 +113,7 @@ input {
   top: 0;
   left: 0;
   z-index: 100;
-  
+
   transition: all 1s linear;
 }
 
@@ -116,17 +121,13 @@ input {
 @import "blocks/container";
 @import "blocks/btn";
 @import "blocks/header";
-// @import "blocks/nav";
 @import "blocks/burger";
 @import "blocks/navbar";
-
+@import "blocks/menu";
 @import "blocks/main";
 @import "blocks/faq-accordion";
 @import "blocks/animation";
 
-
-
 @import "blocks/footer";
-
 
 @import "blocks/modal";
