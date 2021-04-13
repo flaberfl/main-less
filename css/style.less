@@ -14,7 +14,7 @@
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 body {
@@ -22,17 +22,18 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
 
+  &.overlay,
   &.no-scroll,
   &.show-sidebar {
     overflow: hidden;
   }
 }
 
-.mask {
+.overlay {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: fade(@black, 90%);
+  background-color: fade(@black, 80%);
   position: fixed;
   top: 0;
   left: 0;
@@ -42,8 +43,9 @@ body {
 
 @import "blocks/container";
 @import "blocks/header";
-@import "blocks/nav";
+// @import "blocks/nav";
 @import "blocks/burger";
+@import "blocks/navbar";
 @import "blocks/main";
 
 
