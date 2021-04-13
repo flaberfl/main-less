@@ -2,30 +2,101 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import "reset";
+@import "fonts";
 @import "vars";
 @import "vendor";
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
 
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
-html {
-  font-size: 62.5%;
-  // scroll-behavior: smooth;
+*:focus:not(:focus-visible) {
+  outline: none;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
   margin: 0;
+  padding: 0;
+  
+  min-width: 320px;
+  
   font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
-
+  
   &.overlay,
   &.no-scroll,
   &.show-sidebar {
     overflow: hidden;
   }
+}
+
+.container {
+  width: 100%;
+  max-width: @grid-width;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin: 0 auto;
+}
+
+.header {
+  flex-shrink: 0;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .overlay {
@@ -37,23 +108,13 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
-
+  
   transition: all 1s linear;
 }
 
-section {
-  padding: 6rem 0;
-}
-
-h3 {
-  padding: 2rem 0;
-  font-size: 2.8rem;
-  font-weight: 700;
-}
 
 @import "blocks/container";
 @import "blocks/btn";
-@import "blocks/animation";
 @import "blocks/header";
 // @import "blocks/nav";
 @import "blocks/burger";
@@ -61,6 +122,7 @@ h3 {
 
 @import "blocks/main";
 @import "blocks/faq-accordion";
+@import "blocks/animation";
 
 
 
