@@ -1,25 +1,30 @@
 // main: ../style.less
 
 .navbar {
-    display: flex;
+  display: flex;
 
-    @media @mobile {
-        position: fixed;
-        .fcolumn;
-        padding: 10rem;
-        height: auto;
-        left: -32rem;
+  @media @mobile {
+    position: fixed;
+    .fcolumn;
+    padding: 10rem;
+    height: auto;
+    left: -32rem;
 
-        z-index: 999;
-        background: @black;
+    z-index: 999;
+    background: @black;
 
-        color: @white;
+    color: @white;
 
-        transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    &__link {
+      padding: 1.5rem 0;
     }
 
-    .show-sidebar & {
-        .fcolumn;
-        left: 0;
-    }
+  }
+
+  .show-sidebar & {
+    .fcolumn;
+    left: 0;
+  }
 }

@@ -1,0 +1,120 @@
+// main: ../style.less
+
+.faq-accordion {
+  margin: 0;
+}
+
+.faq-accordion__btn {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  border-radius: 50%;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  background-color: @white;
+}
+
+.faq-accordion__item {
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &.active {
+    .faq-accordion__btn::after {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    .faq-accordion__question {
+      color: @accent;
+    }
+  }
+}
+
+.faq-accordion__question {
+  position: relative;
+  margin: 0;
+  border-radius: 10px;
+  padding: 12px 15px 10px 50px;
+  min-height: 70px;
+  font-weight: 600;
+  line-height: 1.625;
+  background-color: @lightblue;
+  transition: color 300ms ease-in-out;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 90px;
+    font-size: 18px;
+  }
+}
+
+.faq-accordion__btn {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  border-radius: 50%;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  background-color: @white;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 2px;
+    width: 50%;
+    height: 2px;
+    background-color: @accent;
+    transform: translate(-50%, -50%);
+    transition: transform 300ms ease-in-out;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  @media (min-width: 768px) {
+    left: 20px;
+    top: 12px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.faq-accordion__answer {
+  overflow: hidden;
+  margin: 0;
+  margin-top: -10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 3px 20px @shadow-primary;
+  font-size: 14px;
+  line-height: 1.57;
+  background-color: @white;
+  transition: max-height 500ms ease-in-out;
+
+  p {
+    margin: 0;
+    padding: 30px 10px 20px;
+
+    @media (min-width: 575px) {
+      padding: 30px 20px;
+    }
+
+    @media (min-width: 768px) {
+      padding: 35px 45px;
+      font-size: 16px;
+      line-height: 1.62;
+    }
+
+    @media (min-width: 992px) {
+      padding: 45px 90px 35px;
+    }
+  }
+}
