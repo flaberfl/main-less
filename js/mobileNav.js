@@ -28,7 +28,6 @@ function showSidebar() {
   body.appendChild(mask);
 
   body.classList.add('show-sidebar');
-
 }
 
 function closeSidebar() {

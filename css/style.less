@@ -18,14 +18,7 @@ html {
   box-sizing: inherit;
 }
 
-*:focus:not(:focus-visible) {
-  outline: none;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
   margin: 0;
   padding: 0;
 
@@ -54,17 +47,17 @@ body {
   margin: 0 auto;
 }
 
-// .header {
-//   flex-shrink: 0;
-// }
+.header {
+  flex-shrink: 0;
+}
 
-// .main {
-//   flex-grow: 1;
-// }
+.main {
+  flex-grow: 1;
+}
 
-// .footer {
-//   flex-shrink: 0;
-// }
+.footer {
+  flex-shrink: 0;
+}
 
 h1,
 h2,
@@ -113,8 +106,6 @@ input {
   top: 0;
   left: 0;
   z-index: 1;
-
-  transition: all 1s linear;
 }
 
 
