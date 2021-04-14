@@ -4,21 +4,21 @@
 
   @media @mobile {
     position: fixed;
-    padding: 6rem;
+    padding: 3rem;
     left: -32rem;
     top: 0;
-
-    z-index: 999;
-    background: @black;
+    z-index: 900;
+    background: @accent;
 
     color: @white;
 
     transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    .show-sidebar & {
+      left: 0;
+    }
   }
 
-  .show-sidebar & {
-    left: 0;
-  }
 }
 
 .menu__list {
@@ -30,7 +30,6 @@
 }
 
 .menu__list-item {
-
   margin-right: 2rem;
 
   &:last-child {
