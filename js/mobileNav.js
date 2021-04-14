@@ -1,5 +1,5 @@
 const burger = document.getElementById('burger');
-const nav = document.getElementById('menu');
+const nav = document.getElementById('navbar');
 const body = document.body;
 
 // Когда кликаем на бургер-проверяем, есть ли у body класс show-sidebar, если класс есть - мы вызываем
